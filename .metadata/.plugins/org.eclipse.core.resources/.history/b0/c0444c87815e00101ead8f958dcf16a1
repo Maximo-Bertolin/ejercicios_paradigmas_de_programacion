@@ -1,0 +1,21 @@
+package main_package;
+
+public class Cargando extends StateArma{
+	private int cantConsultas;
+	
+	public StateArma() {
+		this.cantConsultas = 0;
+	}
+	
+	@Override
+	public void disparar(Arma arma) {
+		System.out.println("No puede dispararse, carga en proceso");
+	}
+
+	@Override
+	public void cargar(Arma arma) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

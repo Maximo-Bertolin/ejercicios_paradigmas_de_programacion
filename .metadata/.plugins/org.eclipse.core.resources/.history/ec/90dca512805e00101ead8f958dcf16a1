@@ -1,0 +1,53 @@
+package main_package;
+
+public class Arma {
+	private String nombre;
+	private float calibre;
+	private int cantBalas;
+	private int tamCargador;
+	
+	private StateArma state;
+	
+	public Arma(String nombre, float calibre, int cantBalasInicial, int tamCargador) throws Exception{
+		if(calibre <= 0 || cantBalas <= 0 || tamCargador <= 0) {
+			throw new Exception();
+		}
+		
+		if(cantBalasInicial > tamCargador) {
+			throw new Exception();
+		}
+		
+		this.nombre = nombre;
+		this.tamCargador = tamCargador;
+		this.calibre = calibre;
+		this.cantBalas = cantBalasInicial;
+		
+		if(cantBalas > 0) {
+			this.state = new Cargada();
+		}
+	}
+	
+	public void disparar() {
+		
+	}
+	
+	public void cargar() {
+		
+	}
+	
+	public int getBalas() {
+		return this.cantBalas;
+	}
+	
+	public float getCalibre() {
+		return this.calibre;
+	}
+	
+	public int getTamCargador() {
+		return this.tamCargador
+	}
+	
+	public String getNombre() {
+		return this.nombre;
+	}
+}

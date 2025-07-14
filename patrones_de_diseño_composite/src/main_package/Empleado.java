@@ -1,0 +1,17 @@
+package main_package;
+
+public interface Empleado {
+	public boolean equals(Empleado empleado);
+	
+	public String getNombre();
+	
+	public int getNroLegajo();
+	
+	public double getSueldosTotales();
+	
+	public int getCantidadEmpleados();
+	
+	public void imprimirOrganigrama();
+	
+	public void imprimirOrganigrama(int pos);
+}

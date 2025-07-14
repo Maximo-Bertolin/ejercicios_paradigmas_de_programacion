@@ -1,0 +1,7 @@
+package programacion_dinamica;
+
+import HashMap<Integer, Integer>;
+
+public class SumaExplosiva {
+	static private HashMap<Integer, Integer> listaSuma;
+}

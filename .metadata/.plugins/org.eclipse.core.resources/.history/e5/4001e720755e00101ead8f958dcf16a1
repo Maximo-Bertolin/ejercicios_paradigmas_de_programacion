@@ -1,0 +1,6 @@
+package main_package;
+
+public abstract class Singleton {
+	private static Singleton instance;
+	
+}

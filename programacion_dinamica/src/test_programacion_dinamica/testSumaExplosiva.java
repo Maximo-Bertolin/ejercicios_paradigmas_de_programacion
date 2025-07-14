@@ -1,0 +1,16 @@
+package test_programacion_dinamica;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import programacion_dinamica.SumaExplosiva;
+
+class testSumaExplosiva {
+
+	@Test
+	void test() {
+		System.out.println(SumaExplosiva.sumaExplosiva(100));
+	}
+
+}

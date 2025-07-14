@@ -1,0 +1,5 @@
+package main_package;
+
+public abstract class StateArma {
+	public abstract void disparar(Arma arma);
+}

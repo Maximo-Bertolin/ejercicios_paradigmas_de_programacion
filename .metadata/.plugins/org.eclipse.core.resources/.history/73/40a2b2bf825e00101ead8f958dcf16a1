@@ -1,0 +1,13 @@
+package main_package;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+		Arma arma = new Arma("Mi arma", (float)9.0, 3, 3);
+		}catch(Exception e) {
+			System.out.println("Ocurrio un error en la ejecucion del programa");
+		}
+	}
+
+}

@@ -1,0 +1,15 @@
+package main_package;
+
+public abstract class StateArma {
+	public abstract void disparar(Arma arma);
+	public abstract void cargar(Arma arma);
+}
+
+/*			Cargada ----------------------> Vacia
+ * 			  |  ^				Disparar	  |
+ * 	   cargar |  |							  |
+ * 			  |  | cargar					  |
+ *  		  V  |							  | Cargar
+ * 			Cargando <------------------------|
+ * 
+ * */

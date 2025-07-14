@@ -1,0 +1,33 @@
+package programacion_dinamica;
+
+import java.util.HashMap;
+
+public class SumaExplosiva {
+	static private HashMap<Integer, Integer> listaSuma;
+	
+	static {
+		listaSuma = new HashMap<Integer, Integer>();
+	}
+	
+	public static int sumaExplosiva(int x) {
+		return sumaExplosivaAux(x, x);
+	}
+	
+	public static int sumaExplosivaAux(int a, int b) {
+		if(a == 0) {
+			return 0;
+		}
+		if(b == 1) {
+			return 1;
+		}
+		if(a == b) {
+			return 1 + sumaExplosivaAux(a, b-1);
+		}else {
+			if(b < a - b) {
+				return sumaExplosivaAux(b, b) + sumaExplosivaAux(a, b-1);
+			}else {
+				return sumaExplosivaAux(a-b, a-b) + sumaExplosivaAux(a, b-1);
+			}
+		}
+	}
+}

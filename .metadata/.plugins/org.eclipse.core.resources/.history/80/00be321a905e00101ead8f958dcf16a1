@@ -1,0 +1,39 @@
+package test_programacion_dinamica;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import programacion_dinamica.MenorCant;
+
+class TestCantPasosParaUno {
+
+	/*@Test
+	void test() {
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(1));
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(2));
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(3));
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(100));
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(1000));
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(2000));
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(3000));
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(4000));
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(5000));
+		
+		System.out.println(menor_cantidad_pasos_a_uno.lista_valores);
+	}*/
+	
+	@Test
+	void testFibonacci() {
+		for(int i = 1; i < 30; i++) {
+			System.out.println((double) MenorCant.fibonacciOptimo(i+1) / MenorCant.fibonacciOptimo(i));
+		}
+	}
+	
+	@Test
+	void testFibonacciNoOptimo() {
+		for(int i = 1; i < 30; i++) {
+			System.out.println((double) MenorCant.fibonacciNoOptimo(i+1) / MenorCant.fibonacciNoOptimo(i));
+		}
+	}
+}

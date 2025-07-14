@@ -1,0 +1,39 @@
+package programacion_dinamica;
+
+import java.util.HashMap;
+
+public class menor_cantidad_pasos_a_uno {
+	static HashMap<Integer, Integer> lista_valores;
+	
+	static {
+		lista_valores = new HashMap<Integer, Integer>();
+	}
+	
+	public static int menor_cant(int n) {
+		if(lista_valores.containsKey(n)) {
+			return lista_valores(n);
+		}
+		if(n>1) {
+			if(n % 2 == 0 && n % 3 == 0) {
+				lista_valores.put(n, 1 + min(menor_cant(n-1), menor_cant(n/2), menor_cant(n/3)));
+			}
+			if(n % 2 == 0) {
+				lista_valores.put(n, 1 + min(menor_cant(n - 1), menor_cant(n / 2), menor_cant(n / 2)));
+			}
+			if(n % 3 == 0) {
+				lista_valores.put(n, 1 + min(menor_cant(n - 1), menor_cant(n / 3), menor_cant(n / 3)));
+			}
+			lista_valores.put(n, 1 + menor_cant(n-1));
+		}
+		return 0;
+	}
+	
+	public static int min(int a, int b, int c) {
+		if(a < b && a < c) {
+			return a;
+		}else if(b < c) {
+			return b;
+		}
+		return c;
+	}
+}

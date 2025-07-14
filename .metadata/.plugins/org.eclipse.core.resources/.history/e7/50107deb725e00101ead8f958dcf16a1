@@ -1,0 +1,11 @@
+package main_package;
+
+public class Jugador {
+	private String nombre;
+	private String email;
+	
+	private Jugador(String nombre, String email) {
+		this.nombre = nombre;
+		this.email = email;
+	}
+}

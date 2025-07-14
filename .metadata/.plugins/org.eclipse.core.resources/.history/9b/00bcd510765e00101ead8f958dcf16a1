@@ -1,0 +1,23 @@
+package main_package;
+
+public class Arma {
+	private String nombre;
+	private float calibre;
+	private int cantBalas;
+	private int tamCargador;
+	
+	public Arma(String nombre, float calibre, int cantBalasInicial, int tamCargador) throws Exception{
+		if(calibre <= 0 || cantBalas <= 0 || tamCargador <= 0) {
+			throw new Exception();
+		}
+		
+		if(cantBalasInicial > tamCargador) {
+			throw new Exception();
+		}
+		
+		this.nombre = nombre;
+		this.cantBalas = cantBalas;
+		this.calibre = calibre;
+		this.cantBalas = cantBalasInicial;
+	}
+}

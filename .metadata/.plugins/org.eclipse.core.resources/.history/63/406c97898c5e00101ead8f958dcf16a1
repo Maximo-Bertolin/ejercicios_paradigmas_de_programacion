@@ -1,0 +1,18 @@
+package test_programacion_dinamica;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import programacion_dinamica.menor_cantidad_pasos_a_uno;
+
+class TestCantPasosParaUno {
+
+	@Test
+	void test() {
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(1));
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(2));
+		System.out.println(menor_cantidad_pasos_a_uno.menor_cant(3));
+		//System.out.println(menor_cantidad_pasos_a_uno.menor_cant(83));
+	}
+}

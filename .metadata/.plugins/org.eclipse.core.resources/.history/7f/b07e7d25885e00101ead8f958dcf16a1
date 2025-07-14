@@ -1,0 +1,14 @@
+package test_programacion_dinamica;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestCantPasosParaUno {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

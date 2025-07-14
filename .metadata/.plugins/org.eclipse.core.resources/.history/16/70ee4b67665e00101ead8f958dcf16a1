@@ -1,0 +1,27 @@
+package main_package;
+
+public class Operario implements Empleado{
+	private double sueldo;
+	private int nroLegajo;
+	
+	public Operario(double sueldo, int nroLegajo) {
+		this.sueldo = sueldo;
+		this.nroLegajo = nroLegajo;
+	}
+	
+	public double getSueldosTotales() {
+		return this.sueldo;
+	}
+	
+	public int getCantidadEmpleados() {
+		return 1;
+	}
+	
+	public int nroLegajo() {
+		return this.nroLegajo;
+	}
+	
+	public boolean equals(Empleado empleado) {
+		return this.nroLegajo == empleado.getNroLegajo();
+	}
+}

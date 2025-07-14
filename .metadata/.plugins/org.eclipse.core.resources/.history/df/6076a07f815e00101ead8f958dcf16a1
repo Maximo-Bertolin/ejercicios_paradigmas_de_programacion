@@ -1,0 +1,17 @@
+package main_package;
+
+public class Cargando extends StateArma{
+
+	@Override
+	public void disparar(Arma arma) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cargar(Arma arma) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

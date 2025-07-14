@@ -1,0 +1,52 @@
+package main_package;
+
+import java.util.ArrayList;
+
+public class Gerente implements Empleado{
+	private ArrayList<Empleado> listaSubordinados;
+	private double sueldo;
+	private int nroLegajo;
+	
+	public Gerente(double sueldo, int nroLegajo) {
+		this.sueldo = sueldo;
+		this.nroLegajo = nroLegajo;
+		listaSubordinados = new ArrayList<Empleado>();
+	}
+	
+	public void addEmpleado(Empleado empleado) {
+		if(!listaSubordinados.contains(empleado)) {
+			listaSubordinados.add(empleado);
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public ArrayList<Empleado> getListaSubordinados(){
+		return (ArrayList<Empleado>) this.listaSubordinados.clone();
+	}
+	
+	public void eliminarEmpleado(Empleado empleado) {
+		this.listaSubordinados.remove(empleado);
+	}
+	
+	public int getCantidadEmpleados() {
+		int cantidad = 1;
+		
+		for(Empleado e : this.listaSubordinados) {
+			cantidad += e.getCantidadEmpleados();
+		}
+		
+		return cantidad;
+	}
+	
+	public double getSueldosTotales() {
+		double sueldosTotales = this.sueldo;
+		
+		for(Empleado e : this.listaSubordinados) {
+			sueldosTotales += e.getSueldosTotales();
+		}
+	}
+	
+	public int getNroLegajo() {
+		return this.nroLegajo;
+	}
+}

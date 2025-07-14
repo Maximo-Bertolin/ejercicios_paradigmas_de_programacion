@@ -1,0 +1,29 @@
+package main_package;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Gerente director = new Gerente(1_000_000, 1);
+		
+		Gerente gerente_RR_HH = new Gerente(800_000, 2);
+		Gerente gerente_Produccion = new Gerente(850_000, 3);
+		Gerente gerente_Ventas = new Gerente(900_000, 4);
+		
+		Empleado operario_produccion_1 = new Operario(650_000, 5);
+		Empleado operario_produccion_2 = new Operario(620_000, 6);
+		Empleado operario_produccion_3 = new Operario(570_000, 7);
+		
+		Empleado operario_RR_HH_1 = new Operario(600_000, 8);
+		Empleado operario_RR_HH_2 = new Operario(580_000, 9);
+		Empleado operario_RR_HH_3 = new Operario(615_000, 10);
+		Empleado operario_RR_HH_4 = new Operario(600_000, 11);
+		
+		Empleado operario_ventas_1 = new Operario(700_000, 12);
+		Empleado operario_ventas_2 = new Operario(650_000, 13);
+		Empleado operario_ventas_3 = new Operario(620_000, 14);
+		Empleado operario_ventas_4 = new Operario(615_000, 15);
+		
+		director.
+	}
+
+}
