@@ -1,4 +1,4 @@
-package codigo_ejercicio;
+package ejercicio1;
 
 public class Division {
 	public static double division(int dividendo, int divisor) throws ArithmeticException{
